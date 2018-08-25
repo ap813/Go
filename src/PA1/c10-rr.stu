@@ -1,0 +1,61 @@
+ 10 processes
+Using Round-Robin
+Quantum   3
+
+Time   0 : P01 arrived
+Time   0 : P01 selected (burst   5)
+Time   3 : P01 selected (burst   2)
+Time   5 : P02 arrived
+Time   5 : P01 finished
+Time   5 : P02 selected (burst   9)
+Time   7 : P03 arrived
+Time   8 : P03 selected (burst   3)
+Time   9 : P04 arrived
+Time  10 : P05 arrived
+Time  11 : P03 finished
+Time  11 : P05 selected (burst   8)
+Time  12 : P07 arrived
+Time  14 : P07 selected (burst   5)
+Time  17 : P02 selected (burst   6)
+Time  20 : P04 selected (burst   4)
+Time  23 : P06 arrived
+Time  23 : P05 selected (burst   5)
+Time  25 : P08 arrived
+Time  26 : P04 selected (burst   1)
+Time  27 : P04 finished
+Time  27 : P07 selected (burst   2)
+Time  29 : P07 finished
+Time  29 : P08 selected (burst   4)
+Time  30 : P09 arrived
+Time  32 : P08 selected (burst   1)
+Time  33 : P08 finished
+Time  33 : P02 selected (burst   3)
+Time  34 : P10 arrived
+Time  36 : P02 finished
+Time  36 : P06 selected (burst   4)
+Time  39 : P09 selected (burst   7)
+Time  42 : P10 selected (burst  10)
+Time  45 : P05 selected (burst   2)
+Time  47 : P05 finished
+Time  47 : P06 selected (burst   1)
+Time  48 : P06 finished
+Time  48 : P09 selected (burst   4)
+Time  51 : P10 selected (burst   7)
+Time  54 : P09 selected (burst   1)
+Time  55 : P09 finished
+Time  55 : P10 selected (burst   4)
+Time  58 : P10 selected (burst   1)
+Time  59 : P10 finished
+Time  59 : Idle
+Finished at time  60
+
+P01 wait   0 turnaround   5
+P02 wait  22 turnaround  31
+P03 wait   1 turnaround   4
+P04 wait  14 turnaround  18
+P05 wait  29 turnaround  37
+P06 wait  21 turnaround  25
+P07 wait  12 turnaround  17
+P08 wait   4 turnaround   8
+P09 wait  18 turnaround  25
+P10 wait  15 turnaround  25
