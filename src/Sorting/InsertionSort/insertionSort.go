@@ -6,31 +6,18 @@ func insertionSort(a [7]int, length int) [7]int {
 
 	array := a;
 
-	largest := -1;
-	index := 0;
-
 	// Sorting
-	for i := 0; i < length-1;  i++{
+	for i := 1; i < length; i++ {
 
-		for j := 0; j < length - i ; j++ {
+		for j := 0; j < i; j++ {
 
-			if largest < array[j]  {
+			if array[i] < array[j] {
 
-				largest = array[j];
-				index = j;
+								
 
 			}
 
 		}
-
-		fmt.Println("Largest: ", largest, i);
-
-		temp := array[length-i-1];
-		array[length-i-1] = array[index];
-		array[index] = temp;
-
-		largest = -1;
-		index = 0;
 
 	}
 
