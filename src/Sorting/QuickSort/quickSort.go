@@ -5,37 +5,38 @@ import (
 )
 
 // QuickSort algoirthm
-func quickSort(a []int) []int{
+func quickSort(array []int) []int{
 
 	// Base Case: return the array if length is less than 2
-	if len(a) < 2 { return a }
+	if len(array) < 2 { return array }
 
 	// Left is the start and Right is the end
-	left, right := 0, len(a) - 1
+	left, right := 0, len(array) - 1
 
 	// Pick a Partition
-	partition := len(a) / 2;
+	partition := len(array) / 2;
 
 	// Swap
-	a[partition], a[right] = a[right], a[partition]
+	array[partition], array[right] = array[right], array[partition]
 
 	// Things smaller than the partition to the swapped left
-	for i := range a {
-		if a[i] < a[right] {
-			a[i], a[left] = a[left], a[i];
+	for i := range array {
+		if array[i] < array[right] {
+			// Swap array[i] with array[left]
+			array[i], array[left] = array[left], array[i];
 			left++;
 		}
 	}
 
 	// Place the pivot after the last smaller element
-	a[left], a[right] = a[right], a[left]
+	array[left], array[right] = array[right], array[left]
 
 	// Recursively call Quicksort using Slices
-	quickSort(a[:left]);
-	quickSort(a[left + 1:]);
+	quickSort(array[:left]);
+	quickSort(array[left + 1:]);
 
 	// Return Sorted Array
-	return a;
+	return array;
 }
 
 func main() {
