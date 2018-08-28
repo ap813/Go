@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const MAX_SIZE int = 1000;
+const MAX_SIZE int = 3;
 
 type stack struct {
 	top int
@@ -24,6 +24,10 @@ func (s *stack) pop() int {
 
 // Puts the values of the at the position of top
 func (s *stack) push(num int) {
+	if s.top > MAX_SIZE-1 {
+		return;
+	}
+
 	s.array[s.top] = num;
 	s.top++;
 	return;
@@ -45,5 +49,6 @@ func main() {
 	stack.push(10);
 	stack.push(20);
 	stack.push(30);
+	stack.push(40);
 	fmt.Println(stack.pop());
 }
